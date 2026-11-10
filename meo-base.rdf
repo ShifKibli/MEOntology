@@ -7,6 +7,269 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#belongsToFaction -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#belongsToFaction">
+        <rdfs:label xml:lang="en">belongs to faction</rdfs:label>
+        <rdfs:label xml:lang="ru">принадлежит фракции</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#enemyOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#enemyOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:label xml:lang="en">is enemy of</rdfs:label>
+        <rdfs:label xml:lang="ru">является врагом для</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#hasSpecies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#hasSpecies">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Species"/>
+        <rdfs:label xml:lang="en">has species</rdfs:label>
+        <rdfs:label xml:lang="ru">принадлежит к виду</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+        <rdfs:label xml:lang="ru">находится в</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#usesWeapon -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#usesWeapon">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Weapon"/>
+        <rdfs:label xml:lang="en">uses weapon</rdfs:label>
+        <rdfs:label xml:lang="ru">использует оружие</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody">
+        <rdfs:comment xml:lang="en">A naturally occurring physical entity, association, or structure in the observable universe.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Естественный физический объект или структура в пределах обозримой вселенной.</rdfs:comment>
+        <rdfs:label xml:lang="en">Celestial Body</rdfs:label>
+        <rdfs:label xml:lang="ru">Небесное тело</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Character">
+        <rdfs:comment xml:lang="en">A sentient individual participating in the events of the Mass Effect universe.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Разумный индивид, участвующий в событиях вселенной Mass Effect.</rdfs:comment>
+        <rdfs:label xml:lang="en">Character</rdfs:label>
+        <rdfs:label xml:lang="ru">Персонаж</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Cluster -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Cluster">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody"/>
+        <rdfs:comment xml:lang="en">A large group of stars and star systems, typically connected to the wider galaxy via a Mass Relay.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Крупная группа звезд и звездных систем, обычно связанная с остальной галактикой ретранслятором массы.</rdfs:comment>
+        <rdfs:label xml:lang="en">Cluster</rdfs:label>
+        <rdfs:label xml:lang="ru">Скопление</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Faction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Faction">
+        <rdfs:comment xml:lang="en">A politically, militarily, or economically unified organization, government, or group.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">олитически, военно или экономически объединенная организация, правительство или группировка.</rdfs:comment>
+        <rdfs:label xml:lang="en">Faction</rdfs:label>
+        <rdfs:label xml:lang="ru">Фракция</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Implant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Implant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Technology"/>
+        <rdfs:comment xml:lang="en">A cybernetic or biotic device surgically embedded to enhance physical or mental capabilities (e.g., L3 biotic amps).</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Кибернетическое или биотическое устройство, хирургически внедренное для расширения физических или ментальных возможностей (например, биотические усилители L3).</rdfs:comment>
+        <rdfs:label xml:lang="en">Implant</rdfs:label>
+        <rdfs:label xml:lang="ru">Имплант</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#OrganicSpecies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#OrganicSpecies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Species"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#SyntheticSpecies"/>
+        <rdfs:comment xml:lang="en">A species characterized by biological, carbon-based, or other naturally evolved life forms.</rdfs:comment>
+        <rdfs:comment>Вид, характеризующийся биологической, углеродной или иной естественно эволюционировавшей формой жизни.</rdfs:comment>
+        <rdfs:label xml:lang="en">Organic Species</rdfs:label>
+        <rdfs:label xml:lang="ru">Органический вид</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Planet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Planet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody"/>
+        <rdfs:comment xml:lang="en">A large celestial body orbiting a star, which may be habitable, resource-rich, or barren.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Крупное небесное тело, вращающееся вокруг звезды, которое может быть обитаемым, богатым ресурсами или пустынным.</rdfs:comment>
+        <rdfs:label xml:lang="en">Planet</rdfs:label>
+        <rdfs:label xml:lang="ru">Планета</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Ship -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Ship">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Technology"/>
+        <rdfs:comment xml:lang="en">A vessel designed for interplanetary or interstellar travel equipped with FTL drives.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Судно, предназначенное для межпланетных или межзвездных перелетов, оснащенное сверхсветовыми двигателями (СЗД).</rdfs:comment>
+        <rdfs:label xml:lang="en">Spacecraft</rdfs:label>
+        <rdfs:label xml:lang="ru">Космический корабль</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Species -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Species">
+        <rdfs:comment xml:lang="en">A group of living or synthetic organisms sharing common characteristics and ancestry.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Группа живых или синтетических организмов, имеющих общие характеристики и происхождение.</rdfs:comment>
+        <rdfs:label xml:lang="en">Species</rdfs:label>
+        <rdfs:label xml:lang="ru">Биологический вид</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#StarSystem -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#StarSystem">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody"/>
+        <rdfs:comment xml:lang="en">A system consisting of a star and the celestial bodies bound to it by gravity.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Система, состоящая из звезды и связанных с ней гравитацией небесных тел.</rdfs:comment>
+        <rdfs:label xml:lang="en">Star System</rdfs:label>
+        <rdfs:label xml:lang="ru">Звездная система</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#SyntheticSpecies -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#SyntheticSpecies">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Species"/>
+        <rdfs:comment xml:lang="en">An artificially created, machine-based, or cybernetic race (e.g., Geth, Reapers).</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Искусственно созданная, машинная или кибернетическая раса (например, Геты, Жнецы).</rdfs:comment>
+        <rdfs:label xml:lang="en">Synthetic Species</rdfs:label>
+        <rdfs:label xml:lang="ru">Синтетический вид</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Technology -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Technology">
+        <rdfs:comment xml:lang="en">Machinery, equipment, and devices developed from applied scientific knowledge.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Оборудование, механизмы и устройства, созданные на основе прикладных научных знаний.</rdfs:comment>
+        <rdfs:label xml:lang="en">Technology</rdfs:label>
+        <rdfs:label xml:lang="ru">Технология</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/michael/ontologies/2026/meo#Weapon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Weapon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/michael/ontologies/2026/meo#Technology"/>
+        <rdfs:comment xml:lang="en">A tool or device, such as a mass accelerator firearm, used for combat or personal defense.</rdfs:comment>
+        <rdfs:comment xml:lang="ru">Инструмент или устройство (например, огнестрельное оружие с ускорителем массы), используемое для ведения боя или самообороны.</rdfs:comment>
+        <rdfs:label xml:lang="en">Weapon</rdfs:label>
+        <rdfs:label xml:lang="ru">Оружие</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#CelestialBody"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Character"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Faction"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Species"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Technology"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Cluster"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Planet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#StarSystem"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Implant"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Ship"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/michael/ontologies/2026/meo#Weapon"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
